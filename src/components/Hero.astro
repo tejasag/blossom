@@ -1,0 +1,35 @@
+---
+import Avatar from "./Avatar.astro";
+---
+
+<div class="flex flex-row justify-between items-center">
+  <div class="flex flex-col ml-[7em] h-screen justify-center">
+    <span class="header text-4xl">Hey there! 👋 I'm</span>
+    <span class="header text-8xl">Tejas Agarwal</span>
+    <div class="flex flex-row items-center h-auto mt-[.25em]">
+      <img src="Arrow.svg" alt="" class="arrow mt-[1.75em]" />
+      <span class="sub text-4xl w-[15em] ml-3"
+        >high school sophomore hacking his way through life</span
+      >
+    </div>
+  </div>
+  <Avatar cls="h-[25em] m-10 mr-[10em]" />
+</div>
+
+<style>
+  .header {
+    font-family: "Cormorant Upright";
+    color: #33272a;
+  }
+
+  .sub {
+    font-family: "Nothing You Could Do";
+    color: #33272a;
+    transform: rotate(-8.7deg);
+  }
+
+  .arrow {
+    width: 6em;
+    margin-left: 6em;
+  }
+</style>

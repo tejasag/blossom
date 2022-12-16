@@ -2,18 +2,34 @@
 import Avatar from "./Avatar.astro";
 ---
 
+<!-- Hero Section  -->
 <div class="flex flex-row justify-between items-center">
-  <div class="flex flex-col ml-[7em] h-screen justify-center">
-    <span class="header text-4xl">Hey there! 👋 I'm</span>
-    <span class="header text-8xl">Tejas Agarwal</span>
+  <!-- Headings -->
+  <div class="flex flex-col ml-[4em] h-screen justify-center">
+    <span class="header text-5xl">Hey there! 👋 I'm</span>
+    <span class="header text-9xl">Tejas Agarwal</span>
     <div class="flex flex-row items-center h-auto mt-[.25em]">
       <img src="Arrow.svg" alt="" class="arrow mt-[1.75em]" />
-      <span class="sub text-4xl w-[15em] ml-3"
+      <span class="sub text-4xl w-[17em] m-3"
         >high school sophomore hacking his way through life</span
       >
     </div>
   </div>
-  <Avatar cls="h-[25em] m-10 mr-[10em]" />
+
+  <!-- Illustration -->
+  <Avatar cls="h-[30em] m-10 mr-[10em]" />
+
+  <!-- Circles -->
+  <img
+    src="white_circle.svg"
+    alt=""
+    class="absolute right-0 bottom-0 -z-10 w-[48rem]"
+  />
+  <img
+    src="pink_circle.svg"
+    alt=""
+    class="absolute top-0 right-0 -z-[5] w-[35rem]"
+  />
 </div>
 
 <style>

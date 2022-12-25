@@ -1,0 +1,51 @@
+<!-- Circles -->
+<div class="circles_content">
+  <img src="white_circle.svg" alt="" class="white_circle" />
+  <img src="pink_circle.svg" alt="" class="pink_circle" />
+</div>
+
+<style>
+  .circles_content {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    position: absolute;
+  }
+
+  .white_circle {
+    animation: spin 10s linear infinite;
+    position: absolute;
+    right: -90px;
+    bottom: -200px;
+    z-index: -10;
+    width: 48rem;
+  }
+
+  .pink_circle {
+    animation: spin 10s linear infinite;
+    position: absolute;
+    right: -100px;
+    top: -200px;
+    z-index: -5;
+    width: 42rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .circles_content {
+      overflow: hidden;
+    }
+
+    .white_circle {
+      width: 30rem;
+      left: 24.87%;
+      right: -112.56%;
+      top: 60%;
+    }
+
+    .pink_circle {
+      width: 25rem;
+      left: -30.87%;
+      top: 55%;
+    }
+  }
+</style>

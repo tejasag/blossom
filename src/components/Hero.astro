@@ -1,38 +1,48 @@
 ---
 import Avatar from "./Avatar.astro";
+import Circles from "./Circles.astro";
 ---
 
 <!-- Hero Section  -->
-<div class="flex flex-row justify-between items-center">
+<div class="hero">
   <!-- Headings -->
-  <div class="flex flex-col ml-[4em] h-screen justify-center">
-    <span class="header text-5xl">Hey there! 👋 I'm</span>
-    <span class="header text-9xl">Tejas Agarwal</span>
+  <div class="header_box">
+    <span class="header text-3xl sm:text-5xl">Hey there! 👋 I'm</span>
+    <span class="header text-8xl sm:text-9xl">Tejas Agarwal</span>
     <div class="flex flex-row items-center h-auto mt-[.25em]">
-      <img src="Arrow.svg" alt="" class="arrow mt-[1.75em]" />
-      <span class="sub text-4xl w-[17em] m-3"
+      <img
+        src="Arrow.svg"
+        alt=""
+        class="sm:w-[6em] w-[4em] ml-[.5em] sm:ml-[6em] mt-[1.75em]"
+      />
+      <span class="sub text-2xl sm:text-4xl w-[10em] sm:w-[17em] m-3"
         >high school sophomore hacking his way through life</span
       >
     </div>
   </div>
 
   <!-- Illustration -->
-  <Avatar cls="h-[30em] m-10 mr-[10em]" />
-
-  <!-- Circles -->
-  <img
-    src="white_circle.svg"
-    alt=""
-    class="absolute right-0 bottom-0 -z-10 w-[48rem]"
-  />
-  <img
-    src="pink_circle.svg"
-    alt=""
-    class="absolute top-0 right-0 -z-[5] w-[35rem]"
-  />
+  <Avatar cls="home" />
+  <Circles />
 </div>
 
 <style>
+  .hero {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    max-width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4em;
+  }
+
   .header {
     font-family: "Cormorant Upright";
     color: #33272a;
@@ -44,8 +54,16 @@ import Avatar from "./Avatar.astro";
     transform: rotate(-8.7deg);
   }
 
-  .arrow {
-    width: 6em;
-    margin-left: 6em;
+  @media screen and (max-width: 600px) {
+    .hero {
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .header_box {
+      margin: 2em;
+      margin-top: 5em;
+    }
   }
 </style>

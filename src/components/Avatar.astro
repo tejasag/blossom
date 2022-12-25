@@ -3,3 +3,21 @@ const { cls } = Astro.props;
 ---
 
 <img src="Avatar.svg" alt="" class={cls} />
+
+<style>
+  .home {
+    height: 30em;
+    margin: 2.5rem;
+    margin-right: 10em;
+  }
+
+  @media screen and (max-width: 600px) {
+    .home {
+      position: absolute;
+      left: calc(50% - 7em);
+      margin: 0;
+      height: 22em;
+      bottom: 0;
+    }
+  }
+</style>

@@ -6,22 +6,31 @@ import Avatar from "./Avatar.astro";
   <div>
     <div class="header m-9">code ~ music ~ math ~ design</div>
     <div class="content m-5">
-      a student by chance and a <span class="so"
-        ><span class="prog"></span>stackoverflow-er</span
-      > by choice, i began another chapter of my life when i was 12 by learning to
-      code. that opened a whole new world for me to explore and since then, ive enjoyed
-      many pieces of tech like typescript, rust, svelte and discovered my passion
-      for mathematics and designing. <br /><br /> if code is my ying, then music
-      is my yang. i'm not a fan of a specific genre, just anything that pleases my
-      ears. i also to love play the guitar and ukulele and hoping to learn more instruments
-      soon! more random things i like: marvel, anime, instant noodles, tacos. <br
-      /><br /> i currently work at codeday where we aim to bring hackathons to 20k+
-      students across india by the end of 2023 and at hack club where I work with
-      the logistics team to provide a better experience to students in india.
-      <br /><br />i live my life by three rules: <br />being a pirate is better
-      than joining the navy,<br /> spot the fish before you get a rod, &
-      <br />
-      <i>speed</i>
+      <span class="prog">
+        <span class="prog_content">programmer</span>
+        <span class="content">
+          a
+          <img src="up.svg" class="up" alt="" />
+          <span class="so"> stackoverflow-er</span> by choice and a student by chance,
+          i began another chapter of my life when i was 12 by learning to code. that
+          opened a whole new world for me to explore and since then, ive enjoyed
+          many pieces of tech like typescript, rust, svelte and discovered my passion
+          for mathematics and designing. <br /><br /> if code is my ying, then music
+          is my yang. i'm not a fan of a specific genre, just anything that pleases
+          my ears. i also to love play the guitar and ukulele and hoping to learn
+          more instruments soon! more random things i like: marvel, anime, instant
+          noodles, tacos.
+          <br /><br /> i currently work at codeday where we aim to bring hackathons
+          to 20k+ students across india by the end of 2023 and at hack club where
+          I work with the logistics team to provide a better experience to students
+          in india.
+          <br /><br />i live my life by three rules: <br />being a pirate is
+          better than joining the navy,<br /> spot the fish before you get a rod,
+          &
+          <br />
+          <i>speed</i>
+        </span>
+      </span>
     </div>
   </div>
   <Avatar cls="about" />
@@ -53,43 +62,43 @@ import Avatar from "./Avatar.astro";
     font-size: 20px;
     line-height: 30px;
     color: #594a4e;
-    max-width: 60vw;
+    /* max-width: 60vw; */
+    display: inline-block;
   }
 
   .prog {
     font-family: "Nothing You Could Do";
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    vertical-align: top;
+    /* white-space: nowrap; */
+  }
+
+  .up {
+    height: clamp(10px, 15px, 15px);
+    display: inline-block;
+    margin-top: 1.5rem;
   }
 
   .so {
     position: relative;
-    margin-left: 10px;
-  }
-
-  .so::before {
-    position: absolute;
-    content: url("https://cloud-mznfowyqy-hack-club-bot.vercel.app/2up.svg");
-    margin-top: 0.5em;
-    margin-left: -0.75em;
-    height: 50px;
-    /* margin-right: 3em; */
+    display: inline-block;
+    /* margin-left: 10px; */
   }
 
   .so::after {
     position: absolute;
     content: url("https://cloud-mznfowyqy-hack-club-bot.vercel.app/1slash.svg");
-    margin-left: -8em;
+    margin-left: -8.5em;
     width: 10rem;
     height: 3rem;
-
-    display: inline-block;
   }
 
-  .so .prog::before {
-    content: "programmer";
-    position: absolute;
-    margin-top: -1.5em;
+  .prog_content {
     transform: matrix(0.99, -0.15, 0.14, 0.99, 0, 0);
-    font-size: 22px;
+    font-size: clamp(15px, 20px, 100px);
   }
 
   @media screen and (max-width: 1000px) {

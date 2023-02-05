@@ -1,8 +1,31 @@
 <!-- Circles -->
-<div class="circles_content">
-  <img src="white_circle.svg" alt="" class="white_circle" />
-  <img src="pink_circle.svg" alt="" class="pink_circle" />
+<div class="circles_content" id="grp">
+  <div class="circles_wrapper">
+    <img src="white_circle.svg" alt="" id="white_circ" class="white_circle" />
+    <img src="pink_circle.svg" alt="" class="pink_circle" />
+  </div>
 </div>
+
+<script>
+  window.onscroll = (x) => {
+    const ele = document.getElementById("white_circ") as HTMLImageElement;
+    if (window.scrollY > (3 / 4) * window.innerHeight) {
+      // const ele = document.querySelectorAll("");
+      // console.log(ele);
+      ele.classList.add("green_circle");
+      ele.src = "green_circle.svg";
+
+      const div = document.getElementById("grp");
+      // div.style.overflow = "visible";
+    } else {
+      ele.classList.remove("green_circle");
+      ele.src = "white_circle.svg";
+
+      const div = document.getElementById("grp");
+      // div.style.overflow = "hidde";
+    }
+  };
+</script>
 
 <style>
   .circles_content {
@@ -12,17 +35,29 @@
     position: absolute;
   }
 
+  .circles_wrapper {
+    width: 100vw;
+    height: 300vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
   .white_circle {
-    animation: spin 10s linear infinite;
     position: absolute;
     right: -90px;
-    bottom: -200px;
+    top: 200px;
     z-index: -10;
     width: 48rem;
+    transition: 2s all ease;
+  }
+
+  .white_circle.green_circle {
+    right: 20vw;
+    top: 100vh;
+    width: calc(100vh + 30px);
   }
 
   .pink_circle {
-    animation: spin 10s linear infinite;
     position: absolute;
     right: -100px;
     top: -200px;
@@ -30,22 +65,42 @@
     width: 42rem;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     .circles_content {
-      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      /* position: relative; */
+    }
+
+    .circles_wrapper {
+      position: relative;
+      width: 100vw;
+      height: 300vh;
+      overflow-x: hidden;
+      overflow-y: visible;
     }
 
     .white_circle {
       width: 30rem;
       left: 24.87%;
-      right: -112.56%;
-      top: 60%;
+      position: absolute;
+
+      top: 65vh;
+      transition: 1s all ease;
+    }
+
+    .white_circle.green_circle {
+      top: 150vh;
+      left: 0;
+      width: 2000px;
     }
 
     .pink_circle {
+      position: absolute;
       width: 25rem;
       left: -30.87%;
-      top: 55%;
+      top: 60vh;
     }
   }
 </style>

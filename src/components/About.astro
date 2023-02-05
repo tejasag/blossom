@@ -1,8 +1,113 @@
-<div class="about">e</div>
+---
+import Avatar from "./Avatar.astro";
+---
+
+<div class="about">
+  <div>
+    <div class="header m-9">code ~ music ~ math ~ design</div>
+    <div class="content m-5">
+      a student by chance and a <span class="so"
+        ><span class="prog"></span>stackoverflow-er</span
+      > by choice, i began another chapter of my life when i was 12 by learning to
+      code. that opened a whole new world for me to explore and since then, ive enjoyed
+      many pieces of tech like typescript, rust, svelte and discovered my passion
+      for mathematics and designing. <br /><br /> if code is my ying, then music
+      is my yang. i'm not a fan of a specific genre, just anything that pleases my
+      ears. i also to love play the guitar and ukulele and hoping to learn more instruments
+      soon! more random things i like: marvel, anime, instant noodles, tacos. <br
+      /><br /> i currently work at codeday where we aim to bring hackathons to 20k+
+      students across india by the end of 2023 and at hack club where I work with
+      the logistics team to provide a better experience to students in india.
+      <br /><br />i live my life by three rules: <br />being a pirate is better
+      than joining the navy,<br /> spot the fish before you get a rod, &
+      <br />
+      <i>speed</i>
+    </div>
+  </div>
+  <Avatar cls="about" />
+</div>
 
 <style>
   .about {
     height: 100vh;
     max-width: 100vw;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header {
+    font-family: "Cedarville Cursive";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 95px;
+    color: #594a4e;
+  }
+
+  .content {
+    font-family: "Proza Libre";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #594a4e;
+    max-width: 60vw;
+  }
+
+  .prog {
+    font-family: "Nothing You Could Do";
+  }
+
+  .so {
+    position: relative;
+    margin-left: 10px;
+  }
+
+  .so::before {
+    position: absolute;
+    content: url("up.svg");
+    margin-top: 0.5em;
+    margin-left: -0.75em;
+    height: 50px;
+    /* margin-right: 3em; */
+  }
+
+  .so::after {
+    position: absolute;
+    content: url("slash.svg");
+    margin-left: -8em;
+    width: 10rem;
+    height: 3rem;
+
+    display: inline-block;
+  }
+
+  .so .prog::before {
+    content: "programmer";
+    position: absolute;
+    margin-top: -1.5em;
+    transform: matrix(0.99, -0.15, 0.14, 0.99, 0, 0);
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .about {
+      flex-direction: column;
+      padding: 1rem;
+      padding-top: 2rem;
+    }
+
+    .header {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 20px;
+      max-width: 80vw;
+    }
   }
 </style>

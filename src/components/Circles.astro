@@ -14,30 +14,24 @@
       // console.log(ele);
       ele.classList.add("green_circle");
       ele.src = "green_circle.svg";
-
-      const div = document.getElementById("grp");
-      // div.style.overflow = "visible";
     } else {
       ele.classList.remove("green_circle");
       ele.src = "white_circle.svg";
-
-      const div = document.getElementById("grp");
-      // div.style.overflow = "hidde";
     }
   };
 </script>
 
 <style>
   .circles_content {
-    width: 100%;
     height: 100%;
+    width: 100%;
     /* overflow: hidden; */
     position: absolute;
   }
 
   .circles_wrapper {
     width: 100vw;
-    height: 200vh;
+    height: 300vh;
     overflow-x: hidden;
     position: relative;
   }

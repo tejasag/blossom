@@ -1,5 +1,5 @@
 ---
-const { cls } = Astro.props;
+const { type } = Astro.props;
 
 const SVGs = {
   home: "Avatar.svg",
@@ -7,11 +7,11 @@ const SVGs = {
 };
 ---
 
-<img src={SVGs[cls]} alt="" class={cls} />
+<img src={SVGs[type]} alt="" class={type} />
 
 <style>
   .home {
-    height: clamp(20rem, 30rem, 30em);
+    height: clamp(10rem, 20rem, 30em);
     margin: 2.5rem;
     margin-right: 10em;
   }
@@ -24,12 +24,9 @@ const SVGs = {
 
   @media screen and (max-width: 600px) {
     .home {
-      position: absolute;
-      left: calc(50% - 7em);
-      margin: 0;
-      height: 20rem;
-      bottom: 0;
+      margin: auto;
     }
+
     .about {
       height: 30rem;
     }

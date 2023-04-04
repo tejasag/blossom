@@ -1,17 +1,10 @@
-<!-- Circles -->
-<div class="circles_content" id="grp">
-  <div class="circles_wrapper">
-    <img src="white_circle.svg" alt="" id="white_circ" class="white_circle" />
-    <img src="pink_circle.svg" alt="" class="pink_circle" />
-  </div>
-</div>
+<img src="white_circle.svg" alt="" id="white_circ" class="white_circle" />
+<img src="pink_circle.svg" alt="" class="pink_circle" />
 
 <script>
-  window.onscroll = (x) => {
+  window.onscroll = (_) => {
     const ele = document.getElementById("white_circ") as HTMLImageElement;
     if (window.scrollY > (3 / 4) * window.innerHeight) {
-      // const ele = document.querySelectorAll("");
-      // console.log(ele);
       ele.classList.add("green_circle");
       ele.src = "green_circle.svg";
     } else {
@@ -23,17 +16,8 @@
 
 <style>
   .circles_content {
-    height: 100%;
     width: 100%;
-    /* overflow-x: hidden; */
-    position: absolute;
-  }
-
-  .circles_wrapper {
-    width: 100vw;
-    height: 200vh;
     overflow-x: hidden;
-    position: relative;
   }
 
   .white_circle {
@@ -63,16 +47,6 @@
     .circles_content {
       height: 100vh;
       width: 100vw;
-      position: absolute;
-      /* position: relative; */
-    }
-
-    .circles_wrapper {
-      position: relative;
-      width: 100vw;
-      min-height: 200vh;
-      overflow-x: hidden;
-      overflow-y: visible;
     }
 
     .white_circle {
@@ -80,7 +54,7 @@
       left: 24.87%;
       position: absolute;
 
-      top: 65vh;
+      top: 55vh;
       transition: 1s all ease;
     }
 
@@ -94,7 +68,7 @@
       position: absolute;
       width: 25rem;
       left: -30.87%;
-      top: 60vh;
+      top: 50vh;
     }
   }
 </style>

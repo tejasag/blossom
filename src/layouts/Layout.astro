@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,12 +28,25 @@
   }
 
   body {
-    /* min-height: 100vh; */
-    height: 200vh;
-    max-width: 100vw;
+    min-height: 200vh;
     background-image: url("https://cloud-mznfowyqy-hack-club-bot.vercel.app/0pattern.svg");
     background-repeat: repeat;
     background-size: cover;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .overflow-hide {
+    position: relative;
+    height: inherit;
+  }
+
+  @media screen and (max-width: 600px) {
+    body {
+      background-size: 300%;
+    }
   }
 
   img {

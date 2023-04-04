@@ -1,30 +1,27 @@
 ---
 import Avatar from "./Avatar.astro";
-import Circles from "./Circles.astro";
 ---
 
 <!-- Hero Section  -->
 <div class="hero">
   <!-- Headings -->
   <div class="header_box">
-    <span class="header text-3xl sm:text-5xl">[WIP WEBSITE]</span>
-    <span class="header text-3xl sm:text-5xl">Hey there! 👋 I'm</span>
-    <span class="header text-8xl sm:text-9xl">Tejas Agarwal</span>
+    <span class="header text-2xl sm:text-5xl">Hey there! 👋 I'm</span>
+    <span class="header text-7xl sm:text-9xl">Tejas Agarwal</span>
     <div class="flex flex-row items-center h-auto mt-[.25em]">
       <img
         src="Arrow.svg"
         alt=""
         class="sm:w-[6em] w-[4em] ml-[.5em] sm:ml-[6em] mt-[1.75em]"
       />
-      <span class="sub text-2xl sm:text-4xl w-[10em] sm:w-[17em] m-3"
-        >high school sophomore hacking his way through life</span
+      <span class="sub text-xl sm:text-4xl w-[12em] sm:w-[17em] m-3"
+        >high school junior hacking his way through life</span
       >
     </div>
   </div>
 
   <!-- Illustration -->
-  <Avatar cls="home" />
-  <Circles />
+  <Avatar type="home" />
 </div>
 
 <style>
@@ -58,7 +55,7 @@ import Circles from "./Circles.astro";
   @media screen and (max-width: 1000px) {
     .hero {
       flex-direction: column;
-      justify-content: start;
+      justify-content: space-between;
       align-items: center;
     }
 

@@ -4,7 +4,10 @@ import Avatar from "./Avatar.astro";
 
 <div class="about">
   <div>
-    <div class="header m-9">code ~ music ~ math ~ design</div>
+    <div class="header m-9 flex flex-col">
+      <span class="hidden md:inline">code ~ music ~ math ~ design</span>
+      <span class="inline md:hidden">💻 ~ 🎵 ~ 📐 ~ 🎨</span>
+    </div>
     <div class="content m-5">
       <span class="prog">
         <span class="prog_content">programmer</span>
@@ -12,32 +15,27 @@ import Avatar from "./Avatar.astro";
           a
           <img src="up.svg" class="up" alt="" />
           <span class="so"> stackoverflow-er</span> by choice and a student by chance,
-          i began a new chapter of my life at the age of 12 when i learnt to code.
-          i've been on an adventure in the tech world since then and have fallen
-          in love with many pieces of software like typescript, rust, svelte and
-          discovered my passion for mathematics and designing. <br /><br /> if code
-          is my ying, then music is my yang. i'm not a fan of a specific genre, just
-          anything that my ears find interesting. i also to love play the guitar
-          and ukulele and hoping to learn more instruments soon! more random things
-          i like include marvel, anime, instant noodles, tacos.
-          <br /><br /> i currently work at codeday where i make tech a better and
-          safer place for teen hackers and at hack club where i work with the logistics
-          team to provide a better experience to students in india.
-          <!-- <br /><br />i live my life by three rules: <br />being a pirate is
-          better than joining the navy,<br /> spot the fish before you get a rod,
-          &
-          <br />
-          <i>speed</i> -->
+          i opened up a whole new world for myself at the age of 12 when i first
+          started coding. since then, i've been on a thrilling adventure in the tech
+          world and fallen head over heels for many pieces of software, such as typescript,
+          rust, and svelte. i've also discovered a passion for math and design along
+          the way! <br /><br /> if code is my yin, then music is definitely my yang.
+          i'm not a fan of any specific genre, i just go with what sounds interesting
+          to my ears. i also love playing the guitar and ukulele, and learning music
+          production! some other random things i enjoy include marvel, anime, instant
+          noodles, and tacos (who doesn't love tacos?!). <br /><br /> i currently
+          work as the program manager at codeday india where i make tech a better
+          and safer place for teen hackers and at hack club where i work with the
+          logistics team to provide a better experience to students in india.
         </span>
       </span>
     </div>
   </div>
-  <Avatar cls="about" />
+  <Avatar type="about" />
 </div>
 
 <style>
   .about {
-    /* height: 100vh; */
     max-width: 100vw;
     padding: 3rem;
     display: flex;
@@ -61,7 +59,6 @@ import Avatar from "./Avatar.astro";
     font-size: 20px;
     line-height: 30px;
     color: #594a4e;
-    /* max-width: 60vw; */
     display: inline-block;
   }
 
@@ -72,7 +69,6 @@ import Avatar from "./Avatar.astro";
     justify-content: flex-start;
     align-items: flex-start;
     vertical-align: top;
-    /* white-space: nowrap; */
   }
 
   .up {
@@ -84,7 +80,6 @@ import Avatar from "./Avatar.astro";
   .so {
     position: relative;
     display: inline-block;
-    /* margin-left: 10px; */
   }
 
   .so::after {

@@ -35,6 +35,25 @@ import Avatar from "./Avatar.astro";
 </div>
 
 <style>
+  .so {
+    position: relative;
+  }
+  .so:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: black;
+
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
   .about {
     max-width: 100vw;
     padding: 3rem;
@@ -77,19 +96,6 @@ import Avatar from "./Avatar.astro";
     margin-top: 1.5rem;
   }
 
-  .so {
-    position: relative;
-    display: inline-block;
-  }
-
-  .so::after {
-    position: absolute;
-    content: url("https://cloud-mznfowyqy-hack-club-bot.vercel.app/1slash.svg");
-    margin-left: -8.5em;
-    width: 10rem;
-    height: 3rem;
-  }
-
   .prog_content {
     transform: matrix(0.99, -0.15, 0.14, 0.99, 0, 0);
     font-size: clamp(15px, 20px, 100px);
@@ -103,7 +109,7 @@ import Avatar from "./Avatar.astro";
     }
 
     .header {
-      font-size: 30px;
+      font-size: 1.5rem;
       line-height: 50px;
       margin-top: 5rem;
       margin-bottom: none;

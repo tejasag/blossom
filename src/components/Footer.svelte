@@ -21,6 +21,10 @@
       <img class="icon" src="Twitter.svg" alt="" />
     </a>
     |
+    <a href="https://behance.net/tejasag" target="_blank" rel="noreferrer">
+      <img class="icon" src="behance.svg" alt="" />
+    </a>
+    |
     <a href="http://linkedin.com/in/tejasag0" target="_blank" rel="noreferrer">
       <img class="icon" src="LinkedIn.svg" alt="" />
     </a>

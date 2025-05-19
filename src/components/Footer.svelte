@@ -29,12 +29,12 @@
       <img class="icon" src="LinkedIn.svg" alt="" />
     </a>
     |
-    <a href="mailto:me@tejasag.com">
+    <a href="mailto:tejas.agarwal.bly@gmail.com">
       <img class="icon" src="email.svg" alt="" />
     </a>
   </div>
   <div class="locale flex flex-col sm:inline items-center">
-    ⏰ {time.toLocaleLowerCase()} ~ 📍 new delhi, india
+    ⏰ {time.toLocaleLowerCase()} ~ 📍 bareilly, india
     <div class="sm:inline">
       <span class="invisible sm:visible"> ~</span> 🎵 {music}
     </div>
